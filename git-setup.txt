@@ -1,0 +1,14 @@
+<!-- 
+		=== First working setup ======
+		1. git config --global user.name "github user name" 
+		2. git config --global user.email "github user email" 
+
+		--- For check ----
+		1. git config user.name (ABCD)
+		2. git config user.email (email.gmail.com) 
+
+
+		git init
+		git add filename or .
+		git commit -m "commit message"
+		-->
