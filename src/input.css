@@ -14,6 +14,7 @@
 	--color-gray-DDD: #dddddd;
 	--color-red-609: #e03609;
 	--color-orange-71F: #f0b71f;
+	--color-white-4: rgba(255, 255, 255, 0.04);
 
 	/* Font Family */
 	--font-orbitron: "Orbitron", sans-serif;
@@ -40,7 +41,10 @@
 	h5,
 	h6 {
 		font-family: var(--font-orbitron);
-		color: var(--color-primary);
+	}
+
+	p {
+		@apply text-[18px] text-[#DDDDDD] leading-8 -tracking-[0.2px];
 	}
 }
 
@@ -50,5 +54,18 @@
 	}
 	.after_bottom {
 		@apply after:absolute after:h-px after:w-full after:bg-linear-to-r after:from-[#F0B71F] after:to-[#E03609] after:bottom-0 after:left-0;
+	}
+
+	.blur_bg {
+		background: rgba(255, 255, 255, 0.04);
+		backdrop-filter: blur(25.7px);
+	}
+
+	.linear_color_text {
+		background: linear-gradient(270deg, #f0b71f 0%, #e03609 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
 	}
 }

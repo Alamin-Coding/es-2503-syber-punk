@@ -11,11 +11,16 @@
       "Courier New", monospace;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
     --font-weight-semibold: 600;
+    --font-weight-bold: 700;
     --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-primary: #121063;
     --color-dark: #010101;
     --font-orbitron: "Orbitron", sans-serif;
     --font-montserrat: "Montserrat", sans-serif;
@@ -170,8 +175,32 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
   .relative {
     position: relative;
+  }
+  .top-\[13px\] {
+    top: 13px;
+  }
+  .top-\[40\%\] {
+    top: 40%;
+  }
+  .top-\[49\%\] {
+    top: 49%;
+  }
+  .-right-\[146px\] {
+    right: calc(146px * -1);
+  }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+  .left-\[32px\] {
+    left: 32px;
+  }
+  .z-10 {
+    z-index: 10;
   }
   .container {
     width: 100%;
@@ -198,11 +227,69 @@
     margin-inline: auto;
     padding-inline: 2.8125rem;
   }
+  .-mt-\[50px\] {
+    margin-top: calc(50px * -1);
+  }
+  .-mt-\[212px\] {
+    margin-top: calc(212px * -1);
+  }
+  .mt-\[43px\] {
+    margin-top: 43px;
+  }
+  .mt-\[93px\] {
+    margin-top: 93px;
+  }
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
+  .size-\[200px\] {
+    width: 200px;
+    height: 200px;
+  }
+  .h-\[260px\] {
+    height: 260px;
+  }
+  .w-\[200px\] {
+    width: 200px;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-\[258px\] {
+    max-width: 258px;
+  }
+  .max-w-\[264px\] {
+    max-width: 264px;
+  }
+  .max-w-\[300px\] {
+    max-width: 300px;
+  }
+  .max-w-\[344px\] {
+    max-width: 344px;
+  }
+  .max-w-\[655px\] {
+    max-width: 655px;
+  }
+  .max-w-\[862px\] {
+    max-width: 862px;
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .grid-cols-\[200px_1fr\] {
+    grid-template-columns: 200px 1fr;
+  }
   .items-center {
     align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
   }
   .justify-between {
     justify-content: space-between;
@@ -213,11 +300,137 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
+  .gap-11 {
+    gap: calc(var(--spacing) * 11);
+  }
   .gap-12\.5 {
     gap: calc(var(--spacing) * 12.5);
   }
+  .gap-\[70px\] {
+    gap: 70px;
+  }
+  .gap-\[100px\] {
+    gap: 100px;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .rounded-\[20px\] {
+    border-radius: 20px;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-\[\#E03609\] {
+    border-color: #E03609;
+  }
+  .border-\[\#F0B71F\] {
+    border-color: #F0B71F;
+  }
+  .px-\[34px\] {
+    padding-inline: 34px;
+  }
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
+  .py-\[22px\] {
+    padding-block: 22px;
+  }
   .py-\[52px\] {
     padding-block: 52px;
+  }
+  .pt-2 {
+    padding-top: calc(var(--spacing) * 2);
+  }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
+  }
+  .pt-11 {
+    padding-top: calc(var(--spacing) * 11);
+  }
+  .pt-\[69px\] {
+    padding-top: 69px;
+  }
+  .pt-\[70px\] {
+    padding-top: 70px;
+  }
+  .pb-4 {
+    padding-bottom: calc(var(--spacing) * 4);
+  }
+  .pb-\[58px\] {
+    padding-bottom: 58px;
+  }
+  .pb-\[68px\] {
+    padding-bottom: 68px;
+  }
+  .pb-\[130px\] {
+    padding-bottom: 130px;
+  }
+  .pl-5 {
+    padding-left: calc(var(--spacing) * 5);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .font-montserrat {
+    font-family: var(--font-montserrat);
+  }
+  .font-orbitron {
+    font-family: var(--font-orbitron);
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-\[22px\] {
+    font-size: 22px;
+  }
+  .text-\[24px\] {
+    font-size: 24px;
+  }
+  .text-\[36px\] {
+    font-size: 36px;
+  }
+  .text-\[47px\] {
+    font-size: 47px;
+  }
+  .text-\[57px\] {
+    font-size: 57px;
+  }
+  .text-\[180px\] {
+    font-size: 180px;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .uppercase {
+    text-transform: uppercase;
   }
 }
 @layer base {
@@ -228,7 +441,14 @@
   }
   h1,	h2,	h3,	h4,	h5,	h6 {
     font-family: var(--font-orbitron);
-    color: var(--color-primary);
+  }
+  p {
+    font-size: 18px;
+    --tw-leading: calc(var(--spacing) * 8);
+    line-height: calc(var(--spacing) * 8);
+    --tw-tracking: calc(0.2px * -1);
+    letter-spacing: calc(0.2px * -1);
+    color: #DDDDDD;
   }
 }
 @layer components {
@@ -288,6 +508,34 @@
       --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
     }
   }
+  .blur_bg {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(25.7px);
+  }
+  .linear_color_text {
+    background: linear-gradient(270deg, #f0b71f 0%, #e03609 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-gradient-position {
   syntax: "*";
@@ -331,10 +579,6 @@
   inherits: false;
   initial-value: 100%;
 }
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-content {
   syntax: "*";
   initial-value: "";
@@ -343,6 +587,10 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-font-weight: initial;
+      --tw-leading: initial;
+      --tw-tracking: initial;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
       --tw-gradient-via: #0000;
@@ -352,7 +600,6 @@
       --tw-gradient-from-position: 0%;
       --tw-gradient-via-position: 50%;
       --tw-gradient-to-position: 100%;
-      --tw-font-weight: initial;
       --tw-content: "";
     }
   }
