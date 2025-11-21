@@ -59,7 +59,7 @@
 	.after_left {
 		@apply before:absolute before:h-full before:w-0.5 before:bg-linear-to-t before:from-[#F0B71F] before:to-[#E03609] before:top-0 before:left-0 z-40;
 	}
-	.after_right {
+	.after_left {
 		@apply after:absolute after:h-full after:w-0.5 after:bg-linear-to-b after:from-[#F0B71F] after:to-[#E03609] after:top-0 after:right-0 z-40;
 	}
 
